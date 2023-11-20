@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Exponencial</title>
-    <!--
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-    -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <canvas id="chart" width="400" height="400"></canvas>
-    <script src="main.js"></script>
+    <div id="grid">
+        <h1>Distribuição Exponencial</h1>
+        <div id="intro">
+            <input type="number" placeholder="lambda" id="lambda">
+        </div>
+        <div id="informacoes">
+            <h2>Informações úteis</h2>
+            <p id="prob1">P(X≤x)=68.27% ⇒ x=</p>
+            <p id="prob2">P(X≤x)=95.45% ⇒ x=</p>
+            <p id="prob3">P(X≤x)=99.7% &nbsp&nbsp⇒ x=</p>
+        </div>
+        <div id="lateral">
+            <p>Função de densidade: lambda*Math.E**(-lambda*x);</p>
+            <p>Função de massa: 1-Math.E**(-lambda*x);</p>
+            <p id="mostrar_lambda">λ = 1</p>
+        </div>
+    </div>
+    <canvas id="myChart" style="width:100%;max-width:1080px"></canvas>
+    <script src="exponencial.js"></script>
 </body>
 </html>

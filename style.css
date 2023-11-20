@@ -1,0 +1,28 @@
+#informacoes, #intro, #lateral{
+    display: inline-block;
+}
+
+#informacoes{
+    margin-left: 30%;
+}
+
+#lateral{
+    margin-left: 10%;
+}
+
+#informacoes h2{
+    margin-top: 0px;
+}
+
+#informacoes p, #lateral p{
+    margin: 0;
+}
+
+/*
+#grid{
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo informacoes"
+    "titulo titulo ";
+}
+*/
