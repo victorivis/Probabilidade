@@ -23,15 +23,23 @@ h1{
     margin: 0;
 }
 
+#intro p{
+    display: inline;
+    margin: 1px;
+}
+
 #grid{
     display: grid;
     grid-template-areas: 
     "titulo informacoes formulas";
-    margin-bottom: 10px;
 }
 
 #intro{
     grid-area: titulo;
+}
+
+#lambda{
+    width: 60px;
 }
 
 #informacoes{
@@ -39,10 +47,11 @@ h1{
 }
 
 #lateral{
-    /*
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    */
     grid-area: formulas;
+}
+
+#chart{
+    display: flex;
+    justify-content: center;
+    margin-left: -2%;
 }

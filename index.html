@@ -11,7 +11,8 @@
     <div id="grid">
         <div id="intro">
             <h1>Distribuição Exponencial</h1>
-            <input type="number" placeholder="lambda" id="lambda">
+            <p>Inserir lambda: </p>
+            <input type="number" placeholder="lambda" id="lambda" step="0.1" value="1">
         </div>
         <div id="informacoes">
             <h2>Informações úteis</h2>
@@ -21,12 +22,15 @@
         </div>
         <div id="lateral">
             <h2>Fórmulas</h2>
-            <p>Função de densidade: lambda*Math.E**(-lambda*x);</p>
-            <p>Função de massa: 1-Math.E**(-lambda*x);</p>
+            <p>Função de densidade: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x3bb;</mi><msup><mi>e</mi><mrow><mo>-</mo><mtext>&#x3bb;x</mtext></mrow></msup></math></p>
+            <p>Função de massa: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn> 1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mtext>&#x3bb;x</mtext></mrow></msup></math></p>
             <p id="mostrar_lambda">λ = 1</p>
         </div>
     </div>
-    <canvas id="myChart" style="width:100%;max-width:1080px"></canvas>
+    <div id="chart">
+        <canvas id="myChart" style="width:100%;max-width:900px"></canvas>
+    </div>
+    
     <script src="exponencial.js"></script>
 </body>
 </html>

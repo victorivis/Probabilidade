@@ -83,9 +83,9 @@ function desenhar_exponencial(lambda){
     }
     else{
         document.getElementById("mostrar_lambda").textContent = "λ = " + lambda;
-        document.getElementById("prob1").textContent = "P(X≤x)=68.27% ⇒ x=" + inversa_funcao_densidade(0.6827, lambda).toFixed(3);
-        document.getElementById("prob2").textContent = "P(X≤x)=95.45% ⇒ x=" + inversa_funcao_densidade(0.9545, lambda).toFixed(3);
-        document.getElementById("prob3").textContent = "P(X≤x)=99.70%  ⇒ x=" + inversa_funcao_densidade(0.997, lambda).toFixed(3);
+        document.getElementById("prob1").textContent = "P(X≤x)=68.27% ⇒ x ≈ " + inversa_funcao_densidade(0.6827, lambda).toFixed(3);
+        document.getElementById("prob2").textContent = "P(X≤x)=95.45% ⇒ x ≈ " + inversa_funcao_densidade(0.9545, lambda).toFixed(3);
+        document.getElementById("prob3").textContent = "P(X≤x)=99.70%  ⇒ x ≈ " + inversa_funcao_densidade(0.997, lambda).toFixed(3);
     }
 }
 
