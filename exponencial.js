@@ -2,14 +2,23 @@ const tamanho = 30;
 let lambda = 1;
 
 function resultado_exponencial(x, lambda){
+    if(lambda<0){
+        return 0;
+    }
     return lambda*Math.E**(-lambda*x);
 }
 
 function soma_cumulativa(x, lambda){
+    if(lambda<0){
+        return 0;
+    }
     return 1-Math.E**(-lambda * x);
 }
 
 function inversa_funcao_densidade(probabilidade, lambda){
+    if(lambda<0){
+        lambda = 0;
+    }
     const x = (Math.log(1-probabilidade)/Math.log(Math.E))/(-lambda);
     return x;
 }
@@ -67,7 +76,7 @@ function desenhar_exponencial(lambda){
                 fill: false
             },
             { 
-            label: "Função de Massa",
+            label: "Função Acumulada",
             data: valoresCumulativos,
             borderColor: "blue",
             fill: false
